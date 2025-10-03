@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
         :root {
             --primary-gold: #FFD700;
             --accent-orange: #FFA500;
@@ -16,24 +18,24 @@
             --space-deep: #1a1a2e;
             --space-mid: #16213e;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Rajdhani', sans-serif;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(27, 79, 143, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 165, 0, 0.15) 0%, transparent 50%),
-                linear-gradient(135deg, var(--space-black) 0%, var(--space-deep) 50%, var(--space-mid) 100%);
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 177, 153, 0.15) 0%, transparent 50%),
+                linear-gradient(135deg, #0a0a2e 0%, #16213e 50%, #0f3460 100%);
             color: #f5f6fa;
             min-height: 100vh;
             overflow-x: hidden;
         }
-        
+
         /* Starfield Background */
         .starfield {
             position: fixed;
@@ -44,7 +46,7 @@
             z-index: 1;
             pointer-events: none;
         }
-        
+
         .star {
             position: absolute;
             background: white;
@@ -52,15 +54,14 @@
             box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
             animation: twinkle 3s infinite;
         }
-        
+
         @keyframes twinkle {
             0%, 100% { opacity: 0.3; }
             50% { opacity: 1; }
         }
-        
-        /* LCARS Header Bar */
+
         .lcars-header {
-            background: linear-gradient(90deg, var(--primary-gold) 0%, var(--accent-orange) 50%, var(--primary-gold) 100%);
+            background: linear-gradient(90deg, #FFB700 0%, #b9bf24 25%, #7fab40 50%, #4e9b59 75%, #2b8e6a 100%);
             height: 50px;
             display: flex;
             align-items: center;
@@ -72,7 +73,7 @@
             top: 0;
             z-index: 1000;
         }
-        
+
         .lcars-logo {
             font-family: 'Orbitron', monospace;
             font-weight: 900;
@@ -80,13 +81,13 @@
             color: var(--space-black);
             letter-spacing: 3px;
         }
-        
+
         .lcars-nav {
             display: flex;
             gap: 2rem;
             align-items: center;
         }
-        
+
         .lcars-nav a {
             color: var(--space-black);
             text-decoration: none;
@@ -95,11 +96,11 @@
             letter-spacing: 1px;
             transition: all 0.3s ease;
         }
-        
+
         .lcars-nav a:hover {
             opacity: 0.7;
         }
-        
+
         /* Main Container */
         .main-container {
             margin-top: 50px;
@@ -111,14 +112,14 @@
             position: relative;
             z-index: 10;
         }
-        
+
         /* Left Sidebar */
         .left-sidebar {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .lcars-panel {
             background: linear-gradient(135deg, rgba(27, 79, 143, 0.25) 0%, rgba(27, 79, 143, 0.15) 100%);
             border: 2px solid var(--secondary-blue);
@@ -129,7 +130,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .lcars-panel::before {
             content: '';
             position: absolute;
@@ -140,23 +141,23 @@
             background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
             transition: left 0.5s ease;
         }
-        
+
         .lcars-panel:hover::before {
             left: 100%;
         }
-        
+
         .lcars-panel:hover {
             transform: translateX(8px);
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
             border-color: var(--primary-gold);
         }
-        
+
         .lcars-panel.active {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.3) 0%, rgba(255, 165, 0, 0.2) 100%);
             border-color: var(--primary-gold);
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
         }
-        
+
         .panel-label {
             font-family: 'Orbitron', monospace;
             font-weight: 700;
@@ -165,21 +166,21 @@
             color: #ffffff;
             text-transform: uppercase;
         }
-        
+
         .panel-sublabel {
             font-size: 0.75rem;
             color: #cccccc;
             margin-top: 4px;
             letter-spacing: 0.5px;
         }
-        
+
         /* Center Content Area */
         .center-content {
             display: flex;
             flex-direction: column;
             gap: 25px;
         }
-        
+
         /* Hero Display */
         .hero-display {
             background: linear-gradient(135deg, rgba(27, 79, 143, 0.2) 0%, rgba(27, 79, 143, 0.1) 100%);
@@ -189,26 +190,26 @@
             text-align: center;
             backdrop-filter: blur(10px);
         }
-        
+
         .hero-title {
             font-family: 'Orbitron', monospace;
             font-size: 3.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, var(--primary-gold), var(--accent-orange));
+            background: linear-gradient(135deg, #FFB700 0%, #b9bf24 25%, #7fab40 50%, #4e9b59 75%, #2b8e6a 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             letter-spacing: 4px;
             margin-bottom: 15px;
         }
-        
+
         .hero-subtitle {
             font-size: 1.3rem;
             color: #cccccc;
             letter-spacing: 2px;
             font-weight: 500;
         }
-        
+
         /* Products Grid */
         .products-grid {
             display: grid;
@@ -216,19 +217,19 @@
             gap: 20px;
             margin: 20px 0;
         }
-        
+
         .product-box {
             background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 0%, rgba(10, 10, 10, 0.5) 100%);
             border: 2px solid var(--secondary-blue);
             border-radius: 12px;
-            padding: 30px 20px;
+            padding: 20px 15px;
             text-align: center;
             transition: all 0.4s ease;
             cursor: pointer;
             position: relative;
             overflow: hidden;
         }
-        
+
         .product-box::after {
             content: '';
             position: absolute;
@@ -242,42 +243,42 @@
             opacity: 0;
             transition: opacity 0.4s ease;
         }
-        
+
         .product-box:hover::after {
             opacity: 0.3;
         }
-        
+
         .product-box:hover {
             transform: translateY(-8px);
             border-color: var(--primary-gold);
             box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
         }
-        
+
         .product-icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 15px;
         }
-        
+
         .product-name {
             font-family: 'Orbitron', monospace;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--secondary-blue);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             letter-spacing: 1px;
         }
-        
+
         .product-box:hover .product-name {
             color: var(--primary-gold);
         }
-        
+
         .product-desc {
             font-size: 0.9rem;
             color: #999999;
             line-height: 1.5;
             margin-bottom: 20px;
         }
-        
+
         .product-btn {
             background: transparent;
             border: 2px solid var(--secondary-blue);
@@ -291,13 +292,13 @@
             transition: all 0.3s ease;
             letter-spacing: 1px;
         }
-        
+
         .product-box:hover .product-btn {
             background: var(--primary-gold);
             border-color: var(--primary-gold);
             color: var(--space-black);
         }
-        
+
         /* Info Panel */
         .info-panel {
             background: linear-gradient(135deg, rgba(27, 79, 143, 0.15) 0%, rgba(27, 79, 143, 0.08) 100%);
@@ -305,7 +306,7 @@
             border-radius: 10px;
             padding: 20px;
         }
-        
+
         .info-title {
             font-family: 'Orbitron', monospace;
             font-size: 1rem;
@@ -313,27 +314,27 @@
             margin-bottom: 15px;
             letter-spacing: 1px;
         }
-        
+
         .info-text {
             font-size: 0.9rem;
             color: #cccccc;
             line-height: 1.6;
         }
-        
+
         /* Right Sidebar */
         .right-sidebar {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
-        
+
         .status-panel {
             background: linear-gradient(135deg, rgba(27, 79, 143, 0.2) 0%, rgba(27, 79, 143, 0.1) 100%);
             border: 1px solid var(--secondary-blue);
             border-radius: 8px 25px 25px 8px;
             padding: 20px;
         }
-        
+
         .status-label {
             font-family: 'Orbitron', monospace;
             font-size: 0.85rem;
@@ -341,13 +342,13 @@
             margin-bottom: 10px;
             letter-spacing: 1px;
         }
-        
+
         .status-value {
             font-size: 0.85rem;
             color: #cccccc;
             line-height: 1.5;
         }
-        
+
         /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 165, 0, 0.08) 100%);
@@ -357,7 +358,7 @@
             text-align: center;
             margin: 30px 0;
         }
-        
+
         .cta-title {
             font-family: 'Orbitron', monospace;
             font-size: 2rem;
@@ -365,7 +366,7 @@
             margin-bottom: 20px;
             letter-spacing: 2px;
         }
-        
+
         .cta-button {
             background: linear-gradient(135deg, var(--primary-gold), var(--accent-orange));
             color: var(--space-black);
@@ -382,12 +383,12 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 35px rgba(255, 215, 0, 0.6);
         }
-        
+
         /* Bottom Status Bar */
         .bottom-bar {
             height: 50px;
@@ -400,14 +401,14 @@
             position: relative;
             z-index: 10;
         }
-        
+
         .status-text {
             font-family: 'Orbitron', monospace;
             font-size: 0.85rem;
             color: #cccccc;
             letter-spacing: 2px;
         }
-        
+
         /* Responsive */
         @media (max-width: 1024px) {
             .main-container {
